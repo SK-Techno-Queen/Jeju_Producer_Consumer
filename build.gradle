@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://packages.confluent.io/maven"
+    }
+}
+
+dependencies {
+    implementation 'org.json:json:20210307'
+    implementation group: 'org.apache.kafka', name: 'kafka-clients', version: '3.5.3'
+    implementation group: 'org.apache.kafka', name: 'kafka-clients', version: '7.5.3-ce'
+    implementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '2.0.9'
+    implementation group: 'redis.clients', name: 'jedis', version: '4.4.4'
+    implementation group: 'com.hazelcast', name: 'hazelcast', version: '5.3.6'
+    implementation group: 'io.confluent', name: 'kafka-avro-serializer', version: '7.5.3'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.2'
+    implementation group: 'io.confluent', name: 'monitoring-interceptors', version: '7.5.3'
+}
+
+test {
+    useJUnitPlatform()
+}
