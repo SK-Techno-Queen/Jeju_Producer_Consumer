@@ -61,7 +61,7 @@ public class JejuBus {
         Schema avroSchema = new Schema.Parser().parse(schemaString);
         Schema keySchema = new Schema.Parser().parse(keySchemaString);
 
-        final String topic = "bus_test_topic3";
+        final String topic = "bus_produce_topic";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
         try (final Producer<GenericRecord, GenericRecord> producer = new KafkaProducer<>(props)) {
@@ -129,7 +129,7 @@ public class JejuBus {
                         }
                     }
 
-                    Thread.sleep(2500);
+                    Thread.sleep(1000);
 
                 } catch (IOException e) {
                     System.out.println("API 요청 중 오류 발생: " + e.getMessage());
