@@ -61,7 +61,7 @@ public class JejuBus {
         Schema avroSchema = new Schema.Parser().parse(schemaString);
         Schema keySchema = new Schema.Parser().parse(keySchemaString);
 
-        final String topic = "bus_produce_topic";
+        final String topic = "jeju_produce_topic";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
         try (final Producer<GenericRecord, GenericRecord> producer = new KafkaProducer<>(props)) {

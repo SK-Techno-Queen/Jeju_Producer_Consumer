@@ -20,8 +20,8 @@ import java.util.Properties;
 
 public class BusConsumer {
     private static final String BOOTSTRAP_SERVERS = "ec2-43-200-230-150.ap-northeast-2.compute.amazonaws.com:9092,ec2-43-202-220-253.ap-northeast-2.compute.amazonaws.com:9092,ec2-43-202-232-33.ap-northeast-2.compute.amazonaws.com:9092";
-    private static final String CONSUMER_TOPIC = "bus_produce_topic";
-    private static final String PRODUCER_TOPIC = "bus_search_topic";
+    private static final String CONSUMER_TOPIC = "jeju_produce_topic";
+    private static final String PRODUCER_TOPIC = "jeju_search_topic";
     private static int recordIndex = 0; // 자동 증가할 인덱스 변수
     private static long idCounter = 1;  // 'id' 필드를 위한 카운터
     private static Map<String, double[]> previousLocations = new HashMap<>();
